@@ -53,8 +53,8 @@ const roadMap = () => {
   return result;
 };
 
-const local = () => {
-  let teste = index
+const totalCities = () => {
+  let total = index
     .toString()
     .split("#")[1]
     .split("<br>")[1]
@@ -62,11 +62,7 @@ const local = () => {
     .split(";")
     .toString()
     .split(",").length;
-  for (i = 1; i < index.length; i++) {
-    for (c = 1; c < index.length; c++) {}
-  }
-  console.log(teste);
-  return teste;
+  return total;
 };
 
 const centerNameSP = () => {
@@ -97,7 +93,7 @@ document.body.innerHTML += `<p>01 - Roteiro das Cidades:<strong><br /> ${nameCit
 
 document.body.innerHTML += `<p>02 - Roteiro A de cada cidade avaliada:<br /><strong> ${roadMap()}</strong></p>`;
 
-document.body.innerHTML += `<p>03 - A quantidade de locais citados no roteiro A de cada cidade é :<br /><strong> ${local()}</strong></p>`;
+document.body.innerHTML += `<p>03 - A quantidade de locais citados no roteiro A de cada cidade é :<br /><strong> ${totalCities()}</strong></p>`;
 
 document.body.innerHTML += `<p>04 - Nomes dos pontos turísticos do Centro de São Paulo:<br /> <strong>${centerNameSP()}</strong></p>`;
 
